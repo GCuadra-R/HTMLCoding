@@ -1,0 +1,30 @@
+html{
+    background-color:darkslategray;
+}
+
+body{
+    color:deepskyblue;
+    text-align: center;
+}
+
+p{
+    text-align: right;
+}
+
+#p1{
+    color: lightgreen;
+}
+
+.lista{
+    color: hotpink;
+    text-align: left;
+}
+
+p.lista{
+    text-align: left;
+    color: khaki;
+}
+
+p.grande{
+    font-size: 200%;
+}

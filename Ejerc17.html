@@ -1,0 +1,57 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forma de Identidad</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form name="formulario2" method="GET">
+            <fieldset>
+            <label>Nombre:</label>
+            <input name="name_field">
+            <br/>
+            <label>Correo Electronico:</label>
+            <input type="email" name="email-field"/>
+            <br/>
+            <label>URL:</label>
+            <input type="url" name="url_field" placeholder="Escribe la URL de tu sitio web"/>
+            <br/>
+            <label>Fecha:</label>
+            <input name="date_field" type="date"/>
+            <br/>
+            <label>Tiempo</label>
+            <input type="time" name="time_field"/>
+            <br/>
+            <label>Fecha y hora de Nacimiento</label>
+            <input type="date" name="fecha_nac"/>
+            <input type="time" name="hora_nac"/> UTC
+            <br/>
+            <label>Mes</label>
+            <input type="month" name="month_field"/>
+            <br/>
+            <label>Semana</label>
+            <input type="week" name="week_field"/>
+            <br/>
+            <label>Numero (min -10, max 10)</label>
+            <input type="number" min="-10" max="10" name="numero"/>
+            <br/>
+            <label>Intervalo (min 0, max 10)</label>
+            <input type="range" min="0" max="10" name="intervalo"/>
+            <br/>
+            <label>Telefono:</label>
+            <input name="phone_field" type="tel"/>
+            <br/>
+            <label>Termino de busqueda:</label>
+            <input name="busqueda" type="search" placeholder="Buscar"/>
+            <br/>
+            <label>Color favorito:</label>
+            <input name="color_field" type="color"/>
+            <br/>
+            <input type="submit" value="Submit!" style="background-color: grey; font-weight: bold;"/>
+            <br/>
+        </fieldset>
+        </form>
+    </body>
+</html>

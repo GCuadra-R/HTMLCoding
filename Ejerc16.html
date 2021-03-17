@@ -1,0 +1,55 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forma de Identidad</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form name="formulario1" method="GET" action="Principal.html">
+            <fieldset>
+                <legend>Formulario</legend>
+            <label>Tipo de Documento</label>
+            <br/>
+            <select>
+                <option>DNI</option>
+                <option>CIF</option>
+                <option>NIF</option>
+                <option>Pasaporte</option>
+                </select>
+            <br/><br/>
+            <label>Nombre(s)</label>
+            <br/>
+            <input/>
+            <br/><br/>
+            <label>Apellido(s)</label>
+            <br/>
+            <input/>
+            <br/><br/>
+            <label>Genero</label>
+            <br/>
+            <input name="Genero" type="radio" value="Masculino"> Masculino
+            <input name="Genero" type="radio" value="Femenino">Femenino
+            <br/><br/>
+            <label>Descripcion</label>
+            <br/><textarea maxlength="400"></textarea>
+            <br/><br/>
+            <label>Fecha de Nacimiento</label>
+            <br/>
+            <input type="date" name="fecha_nac"/>
+            <br/><br/>
+            <label>Edad</label>
+            <br/>
+            <input type="number" min="12" max="50"/>
+            <br/><br/>
+            <label>Años de Experiencia (10 a 100)</label>
+            <br/>
+            <input type="range" min="10" max="100"/>
+            <br/><br/>
+            <input type="submit" value="Cargar Informacion" style="background-color: grey; font-weight: bold;"/>
+            <br/>
+        </fieldset>
+        </form>
+    </body>
+</html>

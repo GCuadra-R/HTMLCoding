@@ -1,0 +1,35 @@
+html{
+    background-color: gray;
+}
+
+body{
+    background-image: url(https://www.pennington.com/-/media/Images/Pennington2-NA/US/blog/seed/how-to-identify-your-grass/Kentucky_31.jpg?h=800&la=en&w=1000&hash=7AF84F56C78ACAD83BABBF310157577B92EFB857);
+    }
+
+p{
+    color: red;
+    text-align: center;
+}
+
+header{
+    color: green;
+    text-align: right;
+}
+
+article{
+    text-align: justify;
+    color: hotpink;
+}
+
+#mas{
+    font-size: 200%;
+}
+
+.prueba{
+    font-size: 150%;
+    margin: 25%;
+}
+
+p.prueba{
+    font-size: 300%;
+}
