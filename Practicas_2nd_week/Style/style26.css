@@ -1,0 +1,17 @@
+p{
+    border-style: inset;
+    border-width: 5px;
+    border-color: lightslategray;
+    border-right: dotted;
+    border-right-color: lime;
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    border-radius: 10px;
+}
+
+p.redondo{
+    border-style: inset;
+    border-width: 2px;
+    border-color: lightslategray;
+    border-radius: 10px;
+}

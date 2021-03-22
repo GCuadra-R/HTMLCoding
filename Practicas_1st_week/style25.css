@@ -1,0 +1,41 @@
+body{
+    background-color: lightgrey;
+}
+
+#divej{
+    color: black;
+    font-size: 24px;
+    text-shadow: 10px 20px 2px darkslategrey;
+}
+
+#redshadow{
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 10px red;
+}
+
+#blackwithred{
+    color: black;
+    font-size: 24px;
+    text-shadow: 1px 1px 5px red, -13px -13px 10px blue;
+} 
+
+#whiteblackborder{
+    background-color: darkcyan;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#inset{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-shadow: 10px 10px 30px slategray;
+    font-size: 80px;
+    color: rgb(105, 104, 104);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;    
+
+}
+
