@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title> Sombras CSS en cajas</title>
         <style type="text/css" media="screen">
-        .offset { overflow: hidden; margin: 20px 0 40px 20px; }
+        .offset { overflow: visible; margin: 20px 0 40px 20px; }
         
         .offset div {
             background-color: #eee;
@@ -24,9 +24,56 @@
         }
 
         .exampleboxshadowa{
-            box-shadow: -100px -5px 1px 2px darkslategray;
+            box-shadow: -2px -2px 0px darkgray;
             border-radius: 0px 0px 0px 0px;
         }
+
+        .exampleboxshadowb{
+            box-shadow: -2px -2px 10px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowc{
+            box-shadow: -5px -8px 0px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowd{
+            box-shadow: -5px -8px 10px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowe{
+            box-shadow: 1px 1px 0px 1px darkgray, -1px -1px 0px 1px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowf{
+            box-shadow: 5px 5px 5px 5px darkgray, -5px -5px 5px 5px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowg{
+            box-shadow:inset -2px -2px 0px 2px darkgray;
+            border-radius: 0px 0px 0px 0px;
+        }
+        .exampleboxshadowh{
+            box-shadow: inset -2px -2px 2px 2px darkgray;
+            border-radius:0px 0px 0px 0px;
+        }
+        .exampleboxshadowi{
+            box-shadow: inset -3px -3px 0px 3px darkgray;
+            border-radius:0px 0px 0px 0px;
+        }
+        .exampleboxshadowj{
+            box-shadow: inset -3px -3px 5px 5px darkgray;
+            border-radius:0px 0px 0px 0px;
+        }
+        .exampleboxshadowk{
+            box-shadow: inset 1px 1px 3px 1px darkgray, inset -1px -1px 3px 1px darkgray;
+            border-radius:0px 0px 0px 0px;
+        }
+        .exampleboxshadowl{
+            box-shadow: inset 3px 3px 5px 5px darkgray, inset -3px -3px 5px 5px darkgray;
+            border-radius:0px 0px 0px 0px;
+        }
+
+    
 
         </style>
     </head>

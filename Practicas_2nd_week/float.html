@@ -1,0 +1,40 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Practicing Float</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css" media="screen">
+            .posicion{
+                border: 3px solid blue;
+                bottom: 0px;
+                left: 30px;
+            
+                position: fixed
+            }
+            .relativo{
+                position: relative;
+                width: 300px;
+                height: 200px;
+                border: 2px solid red;
+            }
+            .absoluto{
+                position: absolute;
+                top: 50px;
+                right: 0px;
+                width: 100px;
+                height: 100px;
+                border: 2px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="posicion">
+            Este es un elemento de esta caja
+        </div>
+        <div class="relativo">
+            Esto es un div relativo
+            <div class="absoluto">Esto es un div absoluto</div>
+        </div>
+    </body>
+</html>
