@@ -1,0 +1,44 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <ul>
+            <li>Informatica</li>
+            <li>Matematicas</li>
+            <li>Ciencias</li>
+        </ul>
+        <button onclick="cambiar()">Cambiar de Matematicas a Lengua</button>
+<br/>
+        <div style="width:100px; height:100px; background-color: burlywood;" onmouseover="style.backgroundColor='blue'" onmouseout="style.backgroundColor='green'" >Test</div>
+
+        <script>
+            function cambiar()
+        {
+            var valores =document.getElementsByTagName("li")
+            valores[1].innerHTML="Lengua"
+            
+        }
+        function titulo(){
+
+var uls_ = document.getElementsByTagName("ul")
+
+for(i in uls_){
+
+    var lis_ = uls_[i].getElementsByTagName("li")
+
+    for(j in lis_){
+
+        lis_[0].innerHTML = '<p style="background-color: rgb(236, 33, 33);"> Titulo</p>'
+    }
+
+}
+}
+
+        </script>   
+    </body>
+</html>
