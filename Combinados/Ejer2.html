@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tablas y JS</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Comptatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="../Combinados/Scripts/jquery-3.6.0.min.js"></script>
+        <link href="Scripts/css/bootstrap.min.css" rel="stylesheet">
+        <script src="../Combinados/Scripts/js/bootstrap.min.js"></script>        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>Mi primer ejemplo de JavaScript y Bootstrap</h1>
+            <div class="row">
+                <div class="col-sm-6" style="background-color: rgb(123, 255, 47);">Primer columna</div>
+                <div class="col-sm-6" id="columna2">Poner nombre y apellidos</div>
+            </div>
+            <div class="row">
+            <div class="col-sm-4" style="background-color: cyan;">Mis Datos personales</div>
+            <div class="col-sm-8">
+                <table class="table table-bordered table-hover">
+                    <tr class="table-danger">
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Apellidos
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id="celda1">
+                            Alberto
+                        </td>
+                        <td id="celda2">
+                            Rodriguez
+                        </td>
+                    <tr>
+                        <td id="celda3">
+                            Rosa
+                        </td>
+                        <td id="celda4">
+                            Garcia
+                        </td>
+                    </tr>
+    
+                </table>
+            </div>
+            </div>
+            <script src="../Combinados/ejer3.js"></script>
+        </body>
+</html>
