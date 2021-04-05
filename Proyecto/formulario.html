@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Proyecto/Sources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    <script src="../Proyecto/Sources/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+    <script src="../Proyecto/Sources/jquery-3.6.0.min.js"></script>
+    <script src="../Proyecto/Sources/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Formulario</title>
+    <style>
+        .form-group {
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        .form-group input.line {
+            border-bottom: 2px solid grey;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background: transparent;
+            border-radius: 0;
+        }
+
+        #Nombre {
+            border-bottom: 2px solid black;
+            font-size: 30px;
+            width: 500px;
+            border-radius: 0;
+        }
+
+        #Provincia {
+            border-bottom: 2px solid grey;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background: transparent;
+            border-radius: 0;
+            color: rgba(34, 34, 33, 0.699);
+        }
+
+        #Pais {
+            border-bottom: 2px solid grey;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background: transparent;
+            border-radius: 0;
+            color: rgba(34, 34, 33, 0.699);
+        }
+
+        #file-upload {
+            float: right;
+            width: 100px;
+            height: 100px;
+            border: 1px solid lightgray;
+            color: grey;
+            font-size: 80px;
+        }
+        #Categorías{
+            border-bottom: 2px solid grey;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background: transparent;
+            border-radius: 0;
+            color: rgba(34, 34, 33, 0.699);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-4 my-4" style="font-family:Arial, Helvetica, sans-serif">
+        <p style="color:cadetblue; font-size: 20px;">Clientes /<span
+                style="color: grey; font-size: 20px;">&nbsp;New</span></p>
+        <button style="color:white ; background-color:cadetblue; border: none" type="button"> GUARDAR </button>
+        <button style="color: cadetblue; background-color: white; border: none" type="button"> DESCARTAR </button>
+        <div class="container p-4 my-4" style="background-color:rgba(241, 239, 235, 0.918);">
+            <div class="row bg-white">
+                <div class="col-md-8 border"> </div>
+                <div class="col-md-2 border" style="padding: 3px; ">
+                    <table style="margin: 0 auto;">
+                        <tr>
+                            <td>
+                                <i class="fas fa-dollar-sign" style="color: gray;font-size: 35px;"></i>
+                            </td>
+                            <td>
+                                <p style="color:indigo;">0 <br /> <span style="color:grey;"> Ventas </span>
+                                <p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-2 border" style="padding: 3px;">
+                    <table style="margin: 0 auto;">
+                        <tr>
+                            <td>
+                                <i class="fas fa-edit" style="color: gray;font-size: 30px;"></i>
+                            </td>
+                            <td>
+                                <p style="color:indigo;">0,00 <br /> <span style="color:grey;"> Facturado </span>
+                                <p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row bg-white border" style="padding: 30px;">
+
+                <div class="col-md-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1"> <b> Individual </b> </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2"> <b> Compañía </b> </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control line vld draw" id="Nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-group row" style="padding-top: 30px;">
+                        <div class="col-md-4">
+                            <label> Company Address</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="Address" type="text" placeholder="Calle">
+                            <input class="form-control line vld draw" id="Address" type="text" placeholder="Calle2">
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                    <input class="form-control line vld draw" id="Address" type="text"
+                                        placeholder="Ciudad">
+                                </div>
+                                <div class="col-sm-4">
+                                    <select class="form-control" id="Provincia">
+                                        <option value="">Provincia</option>
+                                        <option value="Álava/Araba">Álava/Araba</option>
+                                        <option value="Albacete">Albacete</option>
+                                        <option value="Alicante">Alicante</option>
+                                        <option value="Almería">Almería</option>
+                                        <option value="Asturias">Asturias</option>
+                                        <option value="Ávila">Ávila</option>
+                                        <option value="Badajoz">Badajoz</option>
+                                        <option value="Baleares">Baleares</option>
+                                        <option value="Barcelona">Barcelona</option>
+                                        <option value="Burgos">Burgos</option>
+                                        <option value="Cáceres">Cáceres</option>
+                                        <option value="Cádiz">Cádiz</option>
+                                        <option value="Cantabria">Cantabria</option>
+                                        <option value="Castellón">Castellón</option>
+                                        <option value="Ceuta">Ceuta</option>
+                                        <option value="Ciudad Real">Ciudad Real</option>
+                                        <option value="Córdoba">Córdoba</option>
+                                        <option value="Cuenca">Cuenca</option>
+                                        <option value="Gerona/Girona">Gerona/Girona</option>
+                                        <option value="Granada">Granada</option>
+                                        <option value="Guadalajara">Guadalajara</option>
+                                        <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+                                        <option value="Huelva">Huelva</option>
+                                        <option value="Huesca">Huesca</option>
+                                        <option value="Jaén">Jaén</option>
+                                        <option value="La Coruña/A Coruña">La Coruña/A Coruña</option>
+                                        <option value="La Rioja">La Rioja</option>
+                                        <option value="Las Palmas">Las Palmas</option>
+                                        <option value="León">León</option>
+                                        <option value="Lérida/Lleida">Lérida/Lleida</option>
+                                        <option value="Lugo">Lugo</option>
+                                        <option value="Madrid">Madrid</option>
+                                        <option value="Málaga">Málaga</option>
+                                        <option value="Melilla">Melilla</option>
+                                        <option value="Murcia">Murcia</option>
+                                        <option value="Navarra">Navarra</option>
+                                        <option value="Orense/Ourense">Orense/Ourense</option>
+                                        <option value="Palencia">Palencia</option>
+                                        <option value="Pontevedra">Pontevedra</option>
+                                        <option value="Salamanca">Salamanca</option>
+                                        <option value="Segovia">Segovia</option>
+                                        <option value="Sevilla">Sevilla</option>
+                                        <option value="Soria">Soria</option>
+                                        <option value="Tarragona">Tarragona</option>
+                                        <option value="Tenerife">Tenerife</option>
+                                        <option value="Teruel">Teruel</option>
+                                        <option value="Toledo">Toledo</option>
+                                        <option value="Valencia">Valencia</option>
+                                        <option value="Valladolid">Valladolid</option>
+                                        <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+                                        <option value="Zamora">Zamora</option>
+                                        <option value="Zaragoza">Zaragoza</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input class="form-control line vld draw" id="Address" type="text"
+                                        placeholder="C.P.">
+                                </div>
+                            </div>
+                            <select class="form-control" id="Pais">
+                                <option value="País"> País </option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label> Nº identif. fiscal (NIF) </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="Adress" type="text"
+                                placeholder="Por ejemplo, ESA00000000">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button id="file-upload" class="fas fa-camera" type="image"></button>
+                    </div>
+                    <div class="form-group row" style="padding-top: 120px;">
+                        <div class="col-md-4">
+                            <label> Teléfono </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="Tel" type="tel">
+                        </div>
+                        <div class="col-md-4">
+                            <label> Móvil </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="Tel" type="tel">
+                        </div>
+                        <div class="col-md-4">
+                            <label> Correo electrónico </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="correo" type="email">
+                        </div>
+                        <div class="col-md-4">
+                            <label> Enlace a página web </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="form-control line vld draw" id="website" type="url" placeholder="e.j. https://www.odoo.com">
+                        </div>
+                        <div class="col-md-4">
+                            <label> Categorías </label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" id="Categorías">
+                                <option value="Etiquetas"> Etiquetas... </option>
+                            </select>                        
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 30px;">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Contactos y direcciones</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Venta y compra</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Facturación/Contabilidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Notas internas</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="padding: 30px">
+            <button type="button" style="color:cadetblue; border: 0; background-color: white;"> AÑADIR </button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
