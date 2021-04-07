@@ -1,0 +1,67 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+            <video id="video" width="420" src="../Ejercicios II/Media/video.mp4" preload="auto" volume=1>
+                El navegador no soporta video
+            </video>
+            <div class="col-12 pt-5 pb-5 pl-5">
+                <button onclick="playv()" type="button" class="btn btn-success">></button>
+                <button onclick="pausev()" type="button" class="btn btn-danger">||</button>
+                <button onclick="volumedown()" type="button" class="btn btn-success">-</button>
+               <button onclick="volumeup()" type="button" class="btn btn-danger">+</button>
+               <input type="range" name="volumen" min="0" max="1" step="0.1"/>
+               <label id="volumen actual">Volumen actual:100%</label>
+            </div>
+
+            <script>
+
+                var vid = document.getElementById("video");
+                //var aud = document.getElementById("audio");
+    
+                //Play - Pause
+    
+                function playv() {
+                    vid.play();
+                }
+                function pausev() {
+                    vid.pause();
+                }
+
+                function volumeup(){
+        
+                var volumenup=document.getElementById("video").volume
+                var volumenup=volumenup + 0.1;
+        
+                document.getElementById("video").volume=volumenup
+        
+                document.getElementById("volumen_actual").innerHTML= "volumen actual: " + volumenup*100 + " %" 
+                 }
+
+                function volumedownd(){
+        
+                var volumendown=document.getElementById("video").volume
+                var volumendown=volumendown - 0.1;
+                document.getElementById("video").volume=volumendown
+        
+                document.getElementById("volumen_actual").innerHTML="volumen actual: " + volumendown*100 +  " %"
+    }
+    
+                /*function playa() {
+                    aud.play();
+                }
+                function pausea() {
+                    aud.pause();
+                }
+                */
+    
+            </script>
+    
+
+    </body>
+</html>

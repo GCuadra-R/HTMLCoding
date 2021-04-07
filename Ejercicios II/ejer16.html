@@ -1,0 +1,31 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Ejercicios II/Sources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+        <script src="../Ejercicios II/Sources/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+        <script src="../Ejercicios II/Sources/jquery-3.6.0.min.js"></script>
+        <script src="../Ejercicios II/Sources/popper.min.js"></script>
+        <title>Contenedores</title>
+    </head>
+    <body>
+    <div id="contenidos1" style="width:150px; height:60px; background: red";
+    onmouseover="document.getElementById('contenidos').style.background='green';"
+    onmouseout="document.getElementById('contenidos').style.background='red';"
+    ondblclick="cambiar(this)"> Ejemplo de eventos
+    </div>
+    <br>
+    <div id="contenidos2" style="width:150px; height:60px; background: red";
+    ondblclick="cambiar(this)"> Otro ejemplo </div>
+    <p id="parrafo" style="width:150px; height:60px; background: red" ondblclick="cambiar(this)"> Otro ejemplo más </p>
+    <script>
+        function cambiar(param)
+        {
+            param.style.backgroundColor = "yellow";
+        }
+    </script>
+    </body>
+    </html>
+    

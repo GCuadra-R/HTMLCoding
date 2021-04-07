@@ -1,0 +1,34 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Geolocalizacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    
+    </head>
+    <body>
+           <p id="geo">Averigua tus cordinadas</p>
+           <button onclick="localizar()">ACEPTAR</button>
+           <p id="coordinadas">Aqui van las coordenadas</p>
+           <div id="mapa">MAPA</div>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d754.4812969533863!2d-8.727448775078173!3d42.23772801394288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2ses!4v1617815990174!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+           <script>
+
+               function localizar() {
+                   if (navigator.geolocation){
+                       navigator.geolocation.getCurrentPosition(mostrar)
+                   }
+                   else{
+                    document.getElementById("coordenadas").innerHTML="No hay soporte"
+                   }
+                   function mostrar(p)
+                   {
+                       var parrafo=document.getElementById("coordenadas")
+                       parrafo.innerHTML="Latitud: "+p.coords.latitude+" longitud: "+p.coords.longitude
+                   }
+               }
+           </script>
+
+    </body>
+</html>

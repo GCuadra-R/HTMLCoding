@@ -1,0 +1,127 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Ejercicios II/Sources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+        <script src="../Ejercicios II/Sources/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+        <script src="../Ejercicios II/Sources/jquery-3.6.0.min.js"></script>
+        <script src="../Ejercicios II/Sources/popper.min.js"></script>
+        <title>Move columns</title>
+        <style type="text/css">
+            .img {
+                width: 250px;
+            }
+    
+            #img {
+                width: 250px;
+            }
+    
+            body {
+                background: #045FB4;
+                /* el color de fondo de nuestra pgina */
+            }
+    
+            div#contenedor2 {
+                background: red;
+                /* color de fondo del contenedor receptor */
+                border: dotted 2px #FF8000;
+                /* borde de 8 píxeles de tipo punteado */
+                width: 500px;
+                /* anchura de 200 píxeles */
+                height: 500px;
+                /* altura de 200 píxeles */
+                color: #045FB4;
+                /* color de la letra */
+                text-align: center;
+                /* alineación del texto */
+            }
+    
+            div#contenedor1 {
+                background: green;
+                /* color de fondo del contenedor receptor */
+                border: dotted 2px #FF8000;
+                /* borde de 8 píxeles de tipo punteado */
+                width: 500px;
+                /* anchura de 500 píxeles */
+                height: 500px;
+                /* altura de 500 píxeles */
+                color: #045FB4;
+                /* color de la letra */
+                text-align: center;
+                /* alineación del texto */
+            }
+    
+            div#contenedorm {
+                background: white;
+                /* color de fondo del contenedor receptor */
+                border: dotted 2px #FF8000;
+                /* borde de 8 píxeles de tipo punteado */
+                width: 100px;
+                /* anchura de 100 píxeles */
+                height: 100px;
+                /* altura de 100 píxeles */
+                color: #045FB4;
+                /* color de la letra */
+                text-align: center;
+                /* alineación del texto */
+            }
+        </style>
+        <script>
+            function derecha() {
+    
+                //Solución Ejercicio
+    
+                document.getElementById("img").remove();
+                var contimagen = document.getElementById("contenedor2");
+                var imagen = document.createElement("img");
+                imagen.id = "img";
+                imagen.src = "android.jpg";
+                contimagen.appendChild(imagen);
+               
+    
+                //Método simple
+                //var imagen = document.getElementById("img");
+                //var contimagen = document.getElementById("contenedor2");
+                // contimagen.appendChild(imagen);
+    
+    
+                //Método innerHTML NO RECOMENDADO
+                //contimagen.innerHTML = '<img id="img" src="android.jpg"/>'; 
+    
+            }
+    
+            function izquierda() {
+    
+                //Borrado de la imagen
+                document.getElementById("img").remove();
+    
+                //Selección 
+                var contimagen = document.getElementById("contenedor1");
+                var imagen = document.createElement("img");
+                imagen.id = "img";
+                imagen.src = "android.jpg";
+                contimagen.appendChild(imagen);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row" id="contenedorcompleto">
+                <div class="col-5" id="contenedor1">
+                    <img id="img" class="img" src="android.jpg" />
+                </div>
+                <div class="col-2" id="contenedorm">
+                    <input type="button" value="&gt&gt" id="botond" onclick="derecha();" />
+                    <br>
+                    <input type="button" value="&lt&lt" id="botoni" onclick="izquierda();" />
+                </div>
+                <div class="col-5" id="contenedor2">
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>
