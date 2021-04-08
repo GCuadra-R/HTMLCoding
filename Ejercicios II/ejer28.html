@@ -1,0 +1,33 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <button id="boton1">Pulsame</button>
+
+        <p id="p1">Ejemplo de listener</p>
+        <p id="p2" style="background-color: black; width: 200px;">Hola!</p>
+
+
+
+        <script>
+        document.getElementById("p2").addEventListener("dblclick", cambiar_color)
+        document.getElementById("p2").addEventListener("mouseover", cambiar_color1)
+        document.getElementById("p2").addEventListener("mouseout", cambiar_color2)
+    
+        function cambiar_color(){
+            document.getElementById('p2').style.backgroundColor="blue";
+        }
+        function cambiar_color1(){
+            document.getElementById('p2').style.backgroundColor="black";
+        }
+        function cambiar_color2(){
+            document.getElementById('p2').style.backgroundColor="yellow";
+        }
+    </script>
+    </body>
+</html>

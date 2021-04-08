@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <canvas id="lienzo" width="400px"  height="300px" style="border: 1px solid;"></canvas>
+
+    <script>
+        //Localizamos el canvas
+        var l=document.getElementById("lienzo")
+        //Asignamos el contexto
+        var ctx=l.getContext("2d")
+        //Ponemos la posicion inicial
+        ctx.moveTo(0,0)
+        //Ponemos las posicion final
+        ctx.lineTo(50,20)
+        ctx.lineTo(70,10)
+        ctx.lineTo(400,300)
+        //Pintamos
+        ctx.stroke()
+    </script>
+
+    </body>
+</html>

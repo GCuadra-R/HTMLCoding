@@ -1,0 +1,33 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rectangulo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <canvas id="lienzo" width="400px"  height="300px" style="border: 1px solid;"></canvas>
+
+    <script>
+        //Localizamos el canvas
+        var l=document.getElementById("lienzo")
+        //Asignamos el contexto
+        var ctx=l.getContext("2d")
+        //Ponemos la posicion inicial
+        ctx.moveTo(0,0)
+        //Ponemos el field description
+        //ctx.fillRect(5,5,100,100)
+        //ctx.fillRect(200,5,200,100)
+        ctx.fillStyle= "red";
+        ctx.fillRect(0,0,50,50)
+        ctx.fillStyle= "yellow";
+        ctx.fillRect(50,50,100,100)
+        ctx.fillStyle= "green";
+        ctx.fillRect(150,150,400,400)
+        //Pintamos
+        ctx.stroke()
+    </script>
+
+    </body>
+</html>

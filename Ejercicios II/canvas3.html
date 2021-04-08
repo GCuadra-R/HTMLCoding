@@ -1,0 +1,36 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Circulo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <canvas id="lienzo" width="400px"  height="300px" style="border: 1px solid;"></canvas>
+
+    <script>
+        //Localizamos el canvas
+        var l=document.getElementById("lienzo")
+        //Asignamos el contexto
+        var ctx=l.getContext("2d")
+        //comieno un dibujo nuevo
+        ctx.beginPath()
+        //Ponemos el field description
+        ctx.arc(200,150,30,0,2*Math.PI)
+        //Pintamos
+        ctx.stroke()
+        //Iniciamos otro dibujo
+        ctx.beginPath()
+        ctx.arc(200,150,50,0,2*Math.PI)
+        ctx.fillStyle="yellow"
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.arc(200,150,100,0,2*Math.PI)
+        ctx.stroke()
+
+        
+    </script>
+
+    </body>
+</html>
