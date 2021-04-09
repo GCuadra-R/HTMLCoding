@@ -1,0 +1,70 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Sources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+        <script src="../Sources/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+        <script src="../Sources/jquery-3.6.0.min.js"></script>
+        <script src="../Sources/popper.min.js"></script>
+        <title>Calculadora Bootstrap</title>
+    </head>
+    <body>
+        <div class="col-6 offset-3 mt-5">
+            <div class="form-group">
+                <label>Primer número</label>
+                <input type="number" class="form-control" id="num1">
+            </div><br/>
+            <div class="form-group">
+                <label>Segundo número</label>
+                <input type="number" class="form-control" id="num2">
+            </div><br/>
+            <div class="row">
+                <div class="offset-2 col-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="ejecutarOperacion('+')">+</button>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="ejecutarOperacion('-')">-</button>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="ejecutarOperacion('*')">*</button>
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary btn-block" onclick="ejecutarOperacion('/')">/</button>
+                </div>
+            </div>
+            <div class="mt-5" style="font-size: 75px; text-align: center;">
+                <label id="resultado"></label>
+            </div>
+        </div>
+        <script>
+            function ejecutarOperacion(expresion){
+                var num1 = parseFloat(document.getElementById("num1").value)
+                var num2 = parseFloat(document.getElementById("num2").value)
+                var result
+                if(!num1.isNaN && !num2.isNaN){
+                    switch(expresion){
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break; 
+                    }
+                }else{
+                    result = "ERROR - Valores no válidos"
+                }
+                
+                document.getElementById("resultado").innerHTML = result
+            }
+        </script>
+    </body>
+    
+    </html>
