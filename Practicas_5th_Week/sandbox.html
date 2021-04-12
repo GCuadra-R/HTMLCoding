@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Sources/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    <script src="../Sources/jquery-3.6.0.min.js"></script>
+    <script src="../Sources/popper.min.js"></script>
+    <script src="../Sources/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="contenedorcompleto">
+            <div class="col-12">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="primera()">H/M a Segundo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="temperatura()">Farenheit a Celsisu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="posicion()">Calcular Posicion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Desactivado</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" ;>
+            <div id="segundafila" class="col-12" style="border-style: solid; width: 400px; height: 400px;">
+                <h3>SIN SELECCION POR AHORA </h3>
+
+
+            </div>
+        </div>
+        <script>
+            function primera() {
+                //Limpiar todos los objetos
+                var fila = document.getElementById("segundafila")
+                /* hijos=fila.childElementCount
+                 for (i=0;i>0;i++)
+                 {
+                     fila.removeChild(fila.childre[i])
+                 }*/
+                fila.innerHTML = ""
+
+
+                //Crear etiqueta
+                var etiqueta = document.createElement("label")
+                etiqueta.innerText = "Introduzca hora/minuto"
+                fila.appendChild(etiqueta)
+
+                //Crear una caja de texto
+                var caja = document.createElement("input")
+                caja.type = "text"
+                caja.pattern = "[0-9][0-9]:[0-9][0-9]"
+                caja.id = "hora"
+                fila.appendChild(caja)
+
+                //Crear un salto
+                var salto = document.createElement("br")
+                fila.appendChild(salto)
+
+                //Crear la etique para visualizar el resultado
+                var etiqueta = document.createElement("label")
+                etiqueta.innerText = "Resultado"
+                etiqueta.id = "resultadoSegundos"
+                fila.appendChild(etiqueta)
+                //Otro salto
+                var salto1 = document.createElement("br")
+                fila.appendChild(salto1)
+
+                //Crear el boton
+                var boton = document.createElement("button")
+                boton.type = "submit"
+                boton.innerText = "Calcular"
+                fila.appendChild(boton)
+
+                //Añado el evento al botón
+                boton.addEventListener('click', mostrarSegundos)
+
+
+            }
+
+            function temperatura() {
+                //Limiar todos los objetos
+                var fila = document.getElementById("segundafila")
+                fila.innerHTML = ""
+
+
+                //Crear etiqueta
+                var etiqueta = document.createElement("label")
+                etiqueta.innerText = "Introduzca grados farenheit"
+                fila.appendChild(etiqueta)
+
+                //Crear una caja de texto
+                var caja = document.createElement("input")
+                caja.type = "text"
+                caja.pattern = "[0-9]*"
+                caja.id = "grados"
+                fila.appendChild(caja)
+
+                //Crear un salto
+                var salto = document.createElement("br")
+                fila.appendChild(salto)
+
+                //Crear la etique para visualizar el resultado
+                var etiqueta = document.createElement("label")
+                etiqueta.innerText = "Resultado"
+                etiqueta.id = "resultadoCelsius"
+                fila.appendChild(etiqueta)
+
+                //Otro salto
+                var salto1 = document.createElement("br")
+                fila.appendChild(salto1)
+
+                //Crear el boton
+                var boton = document.createElement("button")
+                boton.type = "submit"
+                boton.innerText = "Convertir"
+                fila.appendChild(boton)
+
+                //Añado el evento al botón
+                boton.addEventListener('click', calcularTemperatura)
+
+            }
+            function posicion() {
+                //Limiar todos los objetos
+                var fila = document.getElementById("segundafila")
+                fila.innerHTML = ""
+
+                //Crear la etique para visualizar el resultado
+                var etiqueta = document.createElement("label")
+                etiqueta.innerText = "Posición"
+                etiqueta.id = "posicion"
+                fila.appendChild(etiqueta)
+
+                //Otro salto
+                var salto1 = document.createElement("br")
+                fila.appendChild(salto1)
+
+                //Crear el botón
+                var boton = document.createElement("button")
+                boton.type = "submit"
+                boton.innerText = "Calcular posición"
+                fila.appendChild(boton)
+
+                //Añado el evento al botón
+                boton.addEventListener('click', localizar)
+                //boton.addEventListener('click', mostrar)
+
+            }
+
+            function localizar() {
+
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(mostrar)
+                } else {
+                    document.getElementById("posicion").innerHTML = "No hay soporte de GEO"
+                }
+            }
+            function mostrar(p) {
+                document.getElementById("posicion").innerHTML = "Latitud: " + p.coords.latitude + " Longitud: " + p.coords.longitude;
+            }
+
+
+
+
+
+
+            function mostrarSegundos() {
+                var valor = document.getElementById("hora").value
+                valor = valor.split(":")
+                var resultado = valor[0] * 3600 + valor[1] * 60
+                document.getElementById("resultadoSegundos").innerHTML = resultado + " segundos"
+            }
+            function calcularTemperatura() {
+                f = parseInt(document.getElementById("grados").value)
+                grados = (f - 32) * 5 / 9
+                document.getElementById("resultadoCelsius").innerHTML = grados
+            }
+        </script>
+
+</body>
+
+</html>
