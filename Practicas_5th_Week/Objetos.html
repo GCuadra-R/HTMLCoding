@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <title>Document</title>
+</head>
+<body>
+
+   <input type="text" class="form-control" placeholder="Introduce propiedad" id="propiedad">
+   <input type="text" class="form-control" placeholder="Introduce valor" id="valor">
+   <button class="btn btn-outline-secondary" type="button" onclick="add_propiedad()">Añadir</button>
+   <button class="btn btn-outline-secondary" type="button" onclick="borrar_propiedad()">Borrar</button>
+   <button class="btn btn-outline-secondary" type="button" onclick="mostrar_propiedades()">Mostrar</button>
+
+   <div class="jumbotron" id="div1">
+    
+        
+  </div>
+
+
+  <script>
+
+    var coche={
+                matricula:"XXXXX",
+                cv:90,
+                ruedas:4,
+                pvp:10000
+            }
+
+    
+    function add_propiedad(){
+        var caja_propiedad = document.getElementById("propiedad").value
+        var caja_valor = document.getElementById("valor").value
+
+        coche[caja_propiedad] = caja_valor
+
+
+    }
+
+    function borrar_propiedad(){
+        var caja_propiedad = document.getElementById("propiedad").value
+
+
+        delete coche[caja_propiedad]
+
+    }
+
+    function mostrar_propiedades(){
+        document.getElementById("div1").innerHTML=""
+
+    for(i in coche){
+        document.getElementById("div1").innerHTML = document.getElementById("div1").innerHTML + "<br>" +i+"-->" +coche[i]
+    }
+
+}
+
+
+  </script>
+    
+    
+</body>
+</html>
